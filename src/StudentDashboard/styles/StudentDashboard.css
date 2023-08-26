@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+StudentDashboard/StudentDashboardStudentDashboard/StudentDashboard
+  .student-container {
+  --headerbar-height: 60px;
+  --leftpanel-width: 300px;
+  height: 100vh !important;
+}
+.student-main {
+  margin-top: var(--headerbar-height);
+}
