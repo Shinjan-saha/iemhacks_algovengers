@@ -1,0 +1,185 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    /* background-color: green; */
+    overflow: hidden;
+}
+
+.navbar {
+    height: 10%;
+    width: 100%;
+    /* background-color: rgb(145, 195, 238); */
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-inline: 3rem; */
+}
+
+.logo-container {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    margin-top:0.5rem ;
+    height: 100%;
+    scale: 1.1;
+    /* width: 100px; */
+}
+
+
+.nav-btn-container {
+    height: 100%;
+    width: 25%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signIn-btn {
+    height: 3rem;
+    width: 8em;
+    background:none;
+    border: none;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color:black;
+
+}
+
+.signIn-btn:hover {
+    color: blue;
+}
+
+
+.signin-icon {
+    height: 30px;
+}
+
+
+
+.signInSpan {
+    font-size: 1.3rem;
+
+}
+
+.main {
+    height: 100%;
+    width: 90%;
+    /* background-color: whitesmoke; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:auto;
+}
+
+.text-container {
+    width: 60%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-direction: column;
+    /* background-color: white; */
+}
+
+.slogans-container {
+    padding-inline: 5rem;
+    width: 100%;
+    height:60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* gap: 1rem; */
+    /* align-items: center; */
+}
+
+.para {
+    /* line-height: 2rem; */
+    font-weight: 400;
+    color: rgb(15, 15, 15);
+    font-size: 1.1rem;
+}
+
+.highlight {
+    color: red;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.btn-container {
+    width: 100%;
+    height: 20%;
+    /* background-color: rgba(0, 0, 255, 0.133); */
+    display: flex;
+    /* justify-content: center; */
+    padding-left: 5rem;
+    gap: 3rem;
+    align-items: center;
+}
+
+
+.btn {
+    height: 3rem;
+    width: 8rem;
+    font-size: 1.2rem;
+    background-color: transparent;
+    /* border: none; */
+    outline: rgb(199, 199, 199);
+    
+    border-radius: 0.25rem;
+    cursor: pointer;
+
+}
+
+
+.login-btn {
+    background-color: black;
+    color: white;
+    border: 2ps solid white;
+}
+
+.login-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.aboutUs-btn {
+    background-color: white;
+    color: black;
+}
+
+.aboutUs-btn:hover{
+    background-color: black;
+    color: white;
+    border: 2ps solid white;
+}
+
+.img-container {
+    width: 40%;
+    height: 90%;
+    /* background-color: bisque; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.home-image {
+    width: 100%;
+}
+
+
+
+
