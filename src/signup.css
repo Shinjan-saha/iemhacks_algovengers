@@ -9,14 +9,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* min-height: 100vh; */
+  min-height: 125vh;
   background: #4b4f57;
 }
 .signup-container .box {
   position: relative;
   width: 420px;
   box-shadow: 2px 2px 14px 5px #8f8f8f;
-  height: 600px;
+  height: 700px;
   background: #f6f4f4;
   border-radius: 8px;
   overflow: hidden;
@@ -187,16 +187,15 @@
   margin-top: 0px;
 }
 
-/* @media (max-width: 768px) {
 
-  .signup-container .box{
-    margin-left: 40px;
-    margin-right: 40px;
-  }
+.signup-logo {
+  display: block;
+  margin: 0 auto 20px; /* Adjust margin to center the logo */
+  width: 160px; /* Adjust the size as needed */
+}
 
-  .signup-container {
-   height: auto;
-  }
+.signup-form-heading {
+  text-align: center;
+  margin-top: 20px;
+}
 
-
-} */
