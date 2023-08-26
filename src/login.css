@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+.loggin-container * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.loggin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #4b4f57;
+}
+.loggin-container .box-login {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  background: #f6f4f4;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 2px 2px 14px 5px #8f8f8f;
+}
+/* .box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+} */
+/* @keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+.loggin-container .form {
+  position: relative;
+  inset: 2px;
+  border-radius: 10px;
+  background-color: #fafbfd;
+  z-index: 10;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+}
+.loggin-container .form h2 {
+  color: #fd2f05;
+  font-weight: 500;
+  align-items: center;
+  letter-spacing: 0.1em;
+}
+.loggin-container .inputBox-login {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+.loggin-container .inputBox-login input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  z-index: 10;
+}
+.loggin-container .inputBox-login span {
+  position: absolute;
+  left: 0;
+  padding: 20px 0px 10px;
+  font-size: 1em;
+  color: #8f8f8f;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+.loggin-container .inputBox-login input:valid ~ span,
+.loggin-container .inputBox-login input:focus ~ span {
+  color: #fe2d08;
+  transform: translateX(0px) translateY(-34px);
+  font-size: 0.75em;
+}
+
+.loggin-container .inputBox-login i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #efebeb;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+.loggin-container .inputBox-login input:valid ~ i,
+.loggin-container .inputBox-login input:focus ~ i {
+  height: 44px;
+}
+.loggin-container .links {
+  display: flex;
+  justify-content: space-between;
+}
+.loggin-container .links a {
+  margin: 10px 0;
+  font-size: 0.75em;
+  color: #8f8f8f;
+  text-decoration: none;
+}
+.loggin-container .links a:hover,
+.loggin-container .links a:nth-child(2) {
+  color: #fc1c03;
+}
+.loggin-container input[type="submit"] {
+  border: 1px solid #fd3103;
+  outline: none;
+  background: transparent;
+  color: #140101;
+  padding: 11px 25px;
+  width: 100px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.loggin-container input[type="submit"]:hover {
+  background: #fd3902;
+  color: #23242a;
+}
+.loggin-container input[type="submit"]:active {
+  opacity: 0.8;
+}
+.loggin-container .dropdown-item {
+  border: 2px solid;
+}
+.loggin-container .google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 5px 5px; /* Adjust the padding to control button size */
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px; /* Adjust font size to make it smaller */
+}
+.loggin-container .google-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.loggin-container .google-logo {
+  width: 20px; /* Adjust the width to control the logo size */
+  height: 20px; /* Adjust the height to maintain the aspect ratio */
+  margin-right: 10px; /* Add some spacing between the logo and text */
+}
+
+@media (max-width: 768px) {
+
+  .loggin-container .box-login{
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+}
