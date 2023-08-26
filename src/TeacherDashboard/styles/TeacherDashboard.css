@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+.student-container * {
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+}
+
+.student-container {
+  --headerbar-height: 60px;
+  --leftpanel-width: 300px;
+  height: 100vh !important;
+}
+.student-main {
+  margin-top: var(--headerbar-height);
+}

@@ -1,0 +1,36 @@
+.new_complaint {
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.new_complaint form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.new_complaint textarea[name="message"] {
+  resize: none;
+}
+
+.new_complaint input[type="datetime-local"] {
+  width: max-content;
+}
+
+.new_complaint .submit {
+  background-color: rgb(0, 50, 120);
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1100px) {
+  .new_complaint {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .new_complaint {
+    width: 100%;
+  }
+}
