@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./signup.css";
 // import googleLogo from '../src/images/';
+import logo from "./images/logo.png";
 import { signUp, storeUserdata, createUser } from "./firebase";
 import Select from "react-select";
 
@@ -82,7 +83,8 @@ const SignupForm = ({ onSignup }) => {
     <div className="signup-container">
       <div className="box">
         <div className="form">
-          <h2>SignupForm</h2>
+          <img src={logo} alt="Logo" className="signup-logo" />
+          <h2 className="signup-form-heading">SignupForm</h2>
           <form onSubmit={handleFormSubmit}>
             <div className="inputBox">
               <input type="text" name="CollegeName" required="required" />
@@ -113,10 +115,6 @@ const SignupForm = ({ onSignup }) => {
                   className="custom-select"
                 />
               </label>
-              {/* <option value="">Select an option</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-        </Select> */}
             </div>
             <input type="submit" value="Sign-up" />
           </form>
@@ -125,5 +123,4 @@ const SignupForm = ({ onSignup }) => {
     </div>
   );
 };
-
 export default SignupForm;
