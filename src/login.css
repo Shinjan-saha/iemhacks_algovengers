@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+
 }
 .loggin-container {
   display: flex;
@@ -14,13 +15,14 @@
 }
 .loggin-container .box-login {
   position: relative;
-  width: 420px;
-  height: 420px;
+  width: 350px; /* Increased width */
+  height: 500px; /* Increased height */
   background: #f6f4f4;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 2px 2px 14px 5px #8f8f8f;
+  box-shadow: 2px 2px 12px 2px #8f8f8f;
 }
+
 /* .box::before {
   content: "";
   position: absolute;
@@ -61,6 +63,7 @@
   padding: 50px 40px;
   display: flex;
   flex-direction: column;
+  
 }
 .loggin-container .form h2 {
   color: #fd2f05;
@@ -169,23 +172,18 @@
   width: 100%;
   font-size: 14px; /* Adjust font size to make it smaller */
 }
-.loggin-container .google-button {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+
+.login-form-heading {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.loggin-container .google-logo {
-  width: 20px; /* Adjust the width to control the logo size */
-  height: 20px; /* Adjust the height to maintain the aspect ratio */
-  margin-right: 10px; /* Add some spacing between the logo and text */
+.login-logo-container {
+  display: flex;
+  justify-content: center;
 }
 
-@media (max-width: 768px) {
-
-  .loggin-container .box-login{
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-
+.login-logo {
+  width: 150px; /* Adjust the size as needed */
 }
+ 
