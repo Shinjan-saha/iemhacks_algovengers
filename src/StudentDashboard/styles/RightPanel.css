@@ -1,0 +1,77 @@
+.rightpanel {
+  /* height: calc(100vh - var(--headerbar-height)); */
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 20px 20px;
+  box-sizing: border-box;
+  background-color: rgb(250, 250, 250);
+}
+
+.rightpanel h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.rightpanel .inputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rightpanel input[type="text"],
+.rightpanel textarea,
+.rightpanel input[type="password"],
+.rightpanel input[type="datetime-local"],
+.rightpanel label.file > div {
+  background-color: white;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  outline: none;
+  border-radius: 3px;
+  padding: 8px 12px;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.rightpanel input[type="text"]:hover,
+.rightpanel textarea:hover,
+.rightpanel input[type="password"]:hover,
+.rightpanel input[type="datetime-local"]:hover,
+.rightpanel label.file:hover > div {
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3), 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.rightpanel input[type="text"]:focus,
+.rightpanel textarea:focus,
+.rightpanel input[type="password"]:focus,
+.rightpanel input[type="datetime-local"]:focus {
+  border-color: rgb(0, 98, 234);
+}
+
+.rightpanel label.file {
+}
+
+.rightpanel input[type="file"] {
+  display: none;
+}
+
+.rightpanel label.file > div {
+  max-width: 100%;
+  box-sizing: border-box;
+  width: max-content;
+}
+
+@media screen and (min-width: 750px) {
+  .rightpanel {
+    width: calc(100% - var(--leftpanel-width));
+    margin-left: var(--leftpanel-width);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .rightpanel {
+    width: 100%;
+  }
+}
