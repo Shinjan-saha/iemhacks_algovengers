@@ -284,3 +284,45 @@ export async function uploadMedia(file){
   })
   return address;
 }
+// Resolving issues
+export async function resolveStudent(path) {
+  const dbref = ref(getDatabase());
+  try {
+    const updates = {
+      [`${path}/status`]: "resolved",
+    };
+    await update(dbref, updates);
+    console.log("Resolved in student db");
+  } catch (error) {
+    throw error;
+  }
+}
+export async function resolveteacher(CollegeName, CollegeId, id) {
+  let arr = await getTeacherId(CollegeName);
+  for (let i = 0; i < arr.length; i++) {
+    const dbref = ref(getDatabase());
+    try {
+      let path = `College/${CollegeName}/Teachers/${arr[i]}/Complains/${id}`;
+      const updates = {
+        [`${path}/status`]: "resolved",
+      };
+      await update(dbref, updates);
+      console.log("Resolved in teacher db");
+      console.log(path);
+    } catch (error) {
+      throw error;
+    }
+  }
+}
+
+
+export async function getMedia(media, cb) {
+  let path = `media/${media}`;
+  console.log(path);
+  let strf = rf(storage, path);
+  let ans = "";
+  getDownloadURL(strf).then((url) => {
+    ans = url;
+    cb(ans);
+  });
+}
