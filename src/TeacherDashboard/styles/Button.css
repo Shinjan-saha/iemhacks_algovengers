@@ -1,0 +1,16 @@
+.customButton {
+  color: black;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3), 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 8px 12px;
+  width: max-content;
+
+  transition: all 0.3s;
+}
+
+.customButton:hover {
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5), 4px 4px 5px rgba(0, 0, 0, 0.2);
+}
