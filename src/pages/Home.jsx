@@ -22,11 +22,11 @@ export default function Home() {
       <main className="main">
         <div className="text-container">
           <div className="slogans-container">
-            <h1>Educate, Elevate, <span>Eradicate Ragging.</span></h1>
-            <h1>Say no to Ragging.</h1>
+            <h1 className="slogan1">Educate, Elevate, <span style={{color:"red"}}>Eradicate Ragging.</span></h1>
+            <h1 className="slogan2">Say no to <span style={{color:"red"}}>Ragging!</span></h1>
 			<p  className="para">Ragging incidents are often underreported due to fear of retaliation, social stigma, and a lack of awareness about reporting mechanisms.</p>
 			<p className="para">Lets stand together against <span className="highlight">Ragging!</span></p>
-			<h3>Join us in this journey solving this problem!!</h3>
+			<h3 className="last-text">Join us in this journey solving this problem!!</h3>
           </div>
 
           <div className="btn-container">

@@ -183,3 +183,122 @@
 
 
 
+
+/* Media Queries */
+
+
+@media only screen and (max-width:950px){
+    .logo-container {
+        width: 30%;
+    }
+    .home-image{
+        scale: 1.5;
+        z-index: -1;
+    }
+}
+
+
+@media only screen and (max-width:650px){
+    .logo-container {
+        width: 30%;
+    }
+
+    .logo {
+        height: 45px;
+    }
+
+    .nav-btn-container {
+        width: 30%;
+    }
+
+    .slogan1 {
+        font-size: 1.7rem;
+        /* margin: 0; */
+    }
+    .slogan2 {
+        font-size: 1.5rem;
+        /* margin-top:0.5rem; */
+    }
+
+    .para {
+        font-size: 1rem;
+    }
+
+    .home-image {
+        scale: 1.4;
+        z-index: -1;
+    }
+}
+
+
+@media only screen and (max-width:550px){
+    .logo-container {
+        width: 30%;
+    }
+
+    .logo {
+        height: 45px;
+    }
+
+    .nav-btn-container {
+        width: 30%;
+    }
+
+    .signInSpan {
+        font-size: 1rem;
+    }
+
+    .slogan1 {
+        font-size: 1.5rem;
+        /* margin: 0; */
+    }
+    .slogan2 {
+        font-size: 1.2rem;
+        /* margin-top:0.5rem; */
+    }
+
+    .para {
+        font-size: 0.8rem;
+    }
+
+    .last-text {
+        font-size: 0.9remrem;
+    }
+
+    .home-image {
+        width: 275%;
+        opacity: 0.3;
+        margin-right: 6rem;
+
+    }    
+
+
+    .btn-container {
+        padding: 0;
+        gap: 1rem;
+    }
+
+    .btn {
+        width: 6rem;
+        font-size: 1rem;
+        border-radius: 0.3rem;
+    }
+
+}
+
+
+@media only screen and (max-width:432px){
+    .logo-container {
+        width: 40%;
+    }
+    .logo {
+        margin-top: 0;
+        height: 40px;
+    }
+
+    .nav-btn-container {
+        width: 40%;
+    }
+    
+
+}
