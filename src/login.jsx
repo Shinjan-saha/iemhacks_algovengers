@@ -19,6 +19,9 @@ const LoginForm = () => {
       }
     }
   });
+
+  const [errorMsg, setErrorMsg] = useState("");
+
   const navigate = useNavigate();
   // Storing the data of the user which has logged in
   const a = useContext(NoteContext);
@@ -34,6 +37,7 @@ const LoginForm = () => {
       uid = user["uid"];
     } catch (error) {
       console.log("Error not a reg user");
+      setErrorMsg("Incorect email or password!");
     }
     getUserdata(uid).then((userinfo) => {
       console.log(userinfo);
@@ -79,6 +83,7 @@ const LoginForm = () => {
             <div className="signup-link">
               Don't have an account? <Link to="/signup">Sign up</Link>
             </div>
+            <div className="ErrorMessage">{errorMsg}</div>
           </form>
         </div>
       </div>

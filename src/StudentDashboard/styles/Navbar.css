@@ -36,10 +36,16 @@
 .navbar .profile_logo {
   height: 45px;
   width: 45px;
-  background-color: rgb(183, 183, 183);
+  background-color: rgb(223, 229, 233);
+
   border-radius: 100%;
   border: 2px solid transparent;
   box-sizing: border-box;
+  background-image: url("../../images/profile_logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+
   transition: all 0.3s;
 }
 .navbar .profile_logo:hover {
