@@ -1,6 +1,46 @@
 import "../styles/PreviewComplaint.css";
 
+import React, { useState } from "react";
+import { getMedia } from "../../firebase";
+
 export default function PreviewComplaint({ complaint }) {
+  const [mediaUrl, setMediaUrl] = useState("");
+
+  function get_url_extension(url) {
+    return url.split(/[#?]/)[0].split(".").pop().trim();
+  }
+
+  function get_media_type(ext) {
+    switch (ext.trim().toLowerCase()) {
+      case "jpg":
+      case "jpeg":
+      case "png":
+      case "gif":
+        return "image";
+        break;
+      case "mp4":
+        return "video";
+        break;
+      case "mp3":
+      case "wav":
+        return "audio";
+        break;
+      default:
+        return null;
+    }
+  }
+
+  let mediaExt = get_url_extension(mediaUrl);
+  let mediaType = get_media_type(mediaExt);
+
+  async function getMediaUrl() {
+    await getMedia(complaint.mediaSrc, (mm) => {
+      setMediaUrl(mm);
+      console.log("media orig url ... ", mm, get_url_extension(mm));
+    });
+  }
+  getMediaUrl();
+
   return (
     <div className="preview_complaint">
       <form>
@@ -48,9 +88,18 @@ export default function PreviewComplaint({ complaint }) {
 
         <div className="inputBox">
           <span>Attached File</span>
-          {complaint.mediaSrc && (
-            <img src={complaint.mediaSrc} alt="Uploaded content" />
-          )}
+          {mediaUrl.trim() !== "" &&
+            (mediaType === "image" ? (
+              <img src={mediaUrl} alt="See Uploaded content" />
+            ) : mediaType === "video" ? (
+              <video controls="controls">
+                <source src={mediaUrl} type={`audio/${mediaExt}`} />
+              </video>
+            ) : mediaType === "audio" ? (
+              <audio controls="controls">
+                <source src={mediaUrl} type={`audio/${mediaExt}`} />
+              </audio>
+            ) : null)}
         </div>
       </form>
     </div>

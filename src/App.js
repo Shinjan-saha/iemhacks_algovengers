@@ -4,10 +4,10 @@ import SignupForm from "./signup";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import StudentDashboard from "./StudentDashboard/StudentDashboard";
-// import TeacherDashboard from './TeacherDashboard/TeacherDashboard';
+import TeacherDashboard from './TeacherDashboard/TeacherDashboard';
 import { Routes, Route } from "react-router-dom";
 // import NoteContext from './context/NoteContext';
-
+import NoteState from "./context/NoteState";
 import { useContext } from "react";
 // import NoteState from './context/NoteState';
 import NewComplaint from "./StudentDashboard/components/NewComplaint";
