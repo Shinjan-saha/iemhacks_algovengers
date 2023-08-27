@@ -15,9 +15,9 @@
 }
 .signup-container .box {
   position: relative;
-  width: 420px;
+  width: clamp(0vh,420px,90vw);
   box-shadow: 0px 0px 14px 5px #8f8f8f;
-  height: 650px;
+  height: clamp(0vh,650px,90vh);
   background: #ffffff;
   border-radius: 8px;
   overflow: hidden;
@@ -71,7 +71,7 @@
 }
 .signup-container .inputBox {
   position: relative;
-  width: 300px;
+  width: clamp(0vw,300px,80vw);
   margin-top: 25px;
 }
 .signup-container .inputBox input {
@@ -200,3 +200,18 @@
   margin-top: 20px;
 }
 
+@media screen and (max-height: 720px) {
+.signup-logo {
+  display: none;
+}
+}
+@media screen and (max-width: 450px) {
+.signup-container .form{
+  padding: 0 20px;
+}
+  }
+ @media screen and (max-height: 620px) {
+  .signup-container .inputBox{
+      margin-top: 15px;
+    }
+    }
