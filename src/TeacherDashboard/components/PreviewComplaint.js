@@ -2,7 +2,7 @@ import "../styles/PreviewComplaint.css";
 import Button from "./Button";
 import React, { useState } from "react";
 import { resolveStudent, resolveteacher, getMedia } from "../../firebase";
-export default function PreviewComplaint({ complaint }) {
+export default function PreviewComplaint({ complaint, onfetchdata }) {
   const [mediaUrl, setMediaUrl] = useState("");
 
   function get_url_extension(url) {
@@ -44,6 +44,7 @@ export default function PreviewComplaint({ complaint }) {
       complaint.CollegeId,
       complaint.id
     );
+   path = `College/${complaint.CollegeName}/Teachers/${complaint.CollegeId}/Complains`;
   };
   console.log(complaint);
   if (complaint === undefined) {
@@ -53,11 +54,11 @@ export default function PreviewComplaint({ complaint }) {
   async function getMediaUrl() {
     console.log(complaint.mediaSrc);
    let mm =  await getMedia(complaint.mediaSrc);
-   console.log(mm);
+
 
   
     setMediaUrl(mm);
-    console.log("media orig url ... ", mm, get_url_extension(mm));
+
   }
   getMediaUrl();
 
