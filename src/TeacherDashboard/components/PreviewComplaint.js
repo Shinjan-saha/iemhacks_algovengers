@@ -2,6 +2,9 @@ import "../styles/PreviewComplaint.css";
 import Button from "./Button";
 import React, { useState } from "react";
 import { resolveStudent, resolveteacher, getMedia } from "../../firebase";
+import Loader from "./Loader";
+
+
 export default function PreviewComplaint({ complaint, onfetchdata }) {
   const [mediaUrl, setMediaUrl] = useState("");
 
@@ -61,6 +64,10 @@ export default function PreviewComplaint({ complaint, onfetchdata }) {
 
   }
   getMediaUrl();
+
+  if(mediaUrl.trim()=== ''){
+    return <Loader />
+  }
 
   return (
     <div className="preview_complaint">

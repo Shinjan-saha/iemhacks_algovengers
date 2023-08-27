@@ -330,8 +330,6 @@ export async function getMedia(media) {
   let strf = rf(storage,path);
   let ans =""
   let url = await getDownloadURL(strf)
-  console.log("Oot")
-  console.log(url);
   return url;
 }
 
