@@ -51,10 +51,13 @@ export default function PreviewComplaint({ complaint }) {
   }
 
   async function getMediaUrl() {
-    await getMedia(complaint.mediaSrc, (mm) => {
-      setMediaUrl(mm);
-      console.log("media orig url ... ", mm, get_url_extension(mm));
-    });
+    console.log(complaint.mediaSrc);
+   let mm =  await getMedia(complaint.mediaSrc);
+   console.log(mm);
+
+  
+    setMediaUrl(mm);
+    console.log("media orig url ... ", mm, get_url_extension(mm));
   }
   getMediaUrl();
 

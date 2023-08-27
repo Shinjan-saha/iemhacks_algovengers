@@ -324,15 +324,15 @@ export async function resolveteacher(CollegeName, CollegeId, id) {
 }
 // adding the cloud function
 
-export async function getMedia(media, cb) {
+export async function getMedia(media) {
   let path = `media/${media}`;
   console.log(path);
   let strf = rf(storage,path);
   let ans =""
-  getDownloadURL(strf).then((url)=>{
-    ans =url;
-  })
-  return ans;
+  let url = await getDownloadURL(strf)
+  console.log("Oot")
+  console.log(url);
+  return url;
 }
 
 // Creating the email part
