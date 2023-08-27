@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword} from "firebase/auth";
 import { getDatabase,set,ref,get,child, update } from "firebase/database";
-import { getStorage, uploadBytes ,ref as rf} from "firebase/storage";
+import { getStorage, uploadBytes ,ref as rf, getDownloadURL} from "firebase/storage";
 import { v4} from 'uuid';
 
 
