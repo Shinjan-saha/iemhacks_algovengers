@@ -9,15 +9,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 125vh;
+  width: 100vw;
+  min-height: 100vh;
   background: #4b4f57;
 }
 .signup-container .box {
   position: relative;
   width: 420px;
-  box-shadow: 2px 2px 14px 5px #8f8f8f;
-  height: 700px;
-  background: #f6f4f4;
+  box-shadow: 0px 0px 14px 5px #8f8f8f;
+  height: 650px;
+  background: #ffffff;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -56,9 +57,9 @@
   position: relative;
   inset: 2px;
   border-radius: 10px;
-  background-color: #fafbfd;
+  background-color: #ffffff;
   z-index: 10;
-  padding: 50px 40px;
+  padding: 0 40px;
   display: flex;
   flex-direction: column;
 }
@@ -71,7 +72,7 @@
 .signup-container .inputBox {
   position: relative;
   width: 300px;
-  margin-top: 35px;
+  margin-top: 25px;
 }
 .signup-container .inputBox input {
   position: relative;
@@ -138,7 +139,7 @@
   color: #140101;
   padding: 11px 25px;
   width: 100px;
-  margin-top: 10px;
+  margin-top: 45px;
   border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
