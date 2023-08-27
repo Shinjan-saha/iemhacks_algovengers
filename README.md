@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# RagfreeCampus
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img align="centre"  width="250" src="./src/images/logo.png">
 
-## Available Scripts
+This Platform Main Mission is to eradicate & Solve the problem of Ragging From Eductation Institution by Providing a Teacher & Student Communictation System
 
-In the project directory, you can run:
+# Tech Stacks Used:-
 
-### `npm start`
+<ul>
+<li> <img width ="75" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg" /></li>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<li> <img width ="75" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" /> </li>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+</ul>
 
-### `npm test`
+# Authentictation System
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+From Login Form We are checking if the user already has a Account or Not via FireBase, If they don't have they are redirected to the Sign-up Page to Create a Account
+where Using FireBase We Store the Data, Seperate Accounts are Created for the Teacher & Student, After Succesful Login ,Students are Redirected to the Student DashBoard & Teachers Are Redirected to the Teacher DashBoard
 
-### `npm run build`
+# Complaint System
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In Student DashBoard, Students Files a Complaint & can Upload Various Media File to Suppourt their Complaint, They Can Also See the Status of their Complaint Active or Resolved  
+<br>
+In Teacher Dashboard, Teacher Receives the complaint & on thier Side they can see the Media Files recieved in the Complaint, they can also the the status of the complaint they recieved, after the cmplaint is resolved they can change the status of the complaint
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Students then on their dashboard can see the Updated Status
