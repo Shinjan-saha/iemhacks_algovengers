@@ -59,10 +59,9 @@
   border-radius: 10px;
   background-color: #fafbfd;
   z-index: 10;
-  padding: 50px 40px;
+  padding: 60px 20px;
   display: flex;
   flex-direction: column;
-  
 }
 .loggin-container .form h2 {
   color: #fd2f05;
@@ -89,13 +88,13 @@
 }
 .loggin-container .inputBox-login span {
   position: absolute;
-  left: 0;
-  padding: 20px 0px 10px;
-  font-size: 1em;
-  color: #8f8f8f;
-  pointer-events: none;
-  letter-spacing: 0.05em;
-  transition: 0.5s;
+    left: 0;
+    padding: 14px 0px 10px;
+    font-size: 1em;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
 }
 
 .loggin-container .inputBox-login input:valid ~ span,
