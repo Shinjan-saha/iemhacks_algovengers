@@ -86,6 +86,7 @@
 
 
 .about-main {
+    margin-top:  calc(100vh*10/100);
     max-width:100% !important;
     height: 90%;
     /* background-color: grey; */
