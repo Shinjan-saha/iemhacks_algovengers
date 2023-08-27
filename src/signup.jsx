@@ -4,6 +4,7 @@ import "./signup.css";
 import logo from "./images/logo.png";
 import { signUp, storeUserdata, createUser } from "./firebase";
 import Select from "react-select";
+import { Link } from "react-router-dom";
 
 const SignupForm = ({ onSignup }) => {
   // This algo can break in one more way we will discuss it
@@ -117,6 +118,9 @@ const SignupForm = ({ onSignup }) => {
               </label>
             </div>
             <input type="submit" value="Sign-up" />
+            <div className="loginRedirect">
+              Already have an account? <Link to="/login">Login</Link>
+            </div>
           </form>
         </div>
       </div>
