@@ -1,9 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import logo from '../images/logo.png'
 import loginIcon from '../images/signIn-icon.svg'
 import './about.css'
 
 export default function About() {
+    const navigate= useNavigate();
   return (
     <div className='about-container'>
         <nav className="navbar">
@@ -14,7 +16,9 @@ export default function About() {
         <div className="nav-btn-container">
           <button className="about-login-btn">
             <img src={loginIcon} alt="login" className="login-icon" />
-            <span className="loginSpan">Login</span>
+            <span className="loginSpan" onClick={()=>{
+                navigate('/login')
+            }}>Login</span>
           </button>
         </div>
       </nav>
@@ -74,7 +78,7 @@ export default function About() {
                 </ul>
             </div>
             <div className="credits">
-                <h4>Images Credit</h4>
+                <h4>Images Credits</h4>
                 <ul className="credit-list">
                     <li>Image by <a rel='noreferrer' target='_blank' href="https://www.freepik.com/free-vector/stop-bullying-concept_9005185.htm#query=ragging%20people&position=0&from_view=search&track=ais">Freepik</a></li>
                     <li>Image by <a rel='noreferrer' target='_blank' href="https://www.freepik.com/free-vector/hand-drawn-football-fans-illustration_33757884.htm?query=revolution">Freepik</a></li>
