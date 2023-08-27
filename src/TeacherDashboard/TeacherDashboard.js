@@ -80,7 +80,7 @@ export default function TeacherDashboard() {
           <PreviewComplaint
             complaint={complaints.find(
               (complaint) => complaint.id === curComplaint
-            )}
+            )} onfetchdata={fetchData}
           />
         </RightPanel>
       </div>

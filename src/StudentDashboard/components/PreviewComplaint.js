@@ -2,6 +2,7 @@ import "../styles/PreviewComplaint.css";
 
 import React, { useState } from "react";
 import { getMedia } from "../../firebase";
+import Loader from "./Loader";
 
 export default function PreviewComplaint({ complaint }) {
   const [mediaUrl, setMediaUrl] = useState("");
@@ -34,12 +35,19 @@ export default function PreviewComplaint({ complaint }) {
   let mediaType = get_media_type(mediaExt);
 
   async function getMediaUrl() {
-    await getMedia(complaint.mediaSrc, (mm) => {
-      setMediaUrl(mm);
-      console.log("media orig url ... ", mm, get_url_extension(mm));
-    });
+    console.log(complaint.mediaSrc);
+   let mm =  await getMedia(complaint.mediaSrc);
+
+
+  
+    setMediaUrl(mm);
+    
   }
   getMediaUrl();
+  const [isLoading, setIsLoading] = useState(true);
+  setTimeout(() => {
+    setIsLoading(false);
+  }, 2000);
 
   return (
     <div className="preview_complaint">
@@ -88,18 +96,22 @@ export default function PreviewComplaint({ complaint }) {
 
         <div className="inputBox">
           <span>Attached File</span>
-          {mediaUrl.trim() !== "" &&
-            (mediaType === "image" ? (
-              <img src={mediaUrl} alt="See Uploaded content" />
-            ) : mediaType === "video" ? (
-              <video controls="controls">
-                <source src={mediaUrl} type={`audio/${mediaExt}`} />
-              </video>
-            ) : mediaType === "audio" ? (
-              <audio controls="controls">
-                <source src={mediaUrl} type={`audio/${mediaExt}`} />
-              </audio>
-            ) : null)}
+          
+          {isLoading ? (
+        <Loader /> // Show Loader while content is loading
+      ) : mediaUrl.trim() !== '' ? (
+        mediaType === 'image' ? (
+          <img src={mediaUrl} alt="See Uploaded content" />
+        ) : mediaType === 'video' ? (
+          <video controls="controls">
+            <source src={mediaUrl} type={`video/${mediaExt}`} />
+          </video>
+        ) : mediaType === 'audio' ? (
+          <audio controls="controls">
+            <source src={mediaUrl} type={`audio/${mediaExt}`} />
+          </audio>
+        ) : null
+      ) : null}
         </div>
       </form>
     </div>
