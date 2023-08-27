@@ -1,23 +1,63 @@
 import "../styles/PreviewComplaint.css";
-import Button from './Button'
-import React from "react";
-import { resolveStudent,resolveteacher } from "../../firebase";
+import Button from "./Button";
+import React, { useState } from "react";
+import { resolveStudent, resolveteacher, getMedia } from "../../firebase";
 export default function PreviewComplaint({ complaint }) {
-   const handleResolveClick = async(e) => {
+  const [mediaUrl, setMediaUrl] = useState("");
+
+  function get_url_extension(url) {
+    return url.split(/[#?]/)[0].split(".").pop().trim();
+  }
+
+  function get_media_type(ext) {
+    switch (ext.trim().toLowerCase()) {
+      case "jpg":
+      case "jpeg":
+      case "png":
+      case "gif":
+        return "image";
+        break;
+      case "mp4":
+        return "video";
+        break;
+      case "mp3":
+      case "wav":
+        return "audio";
+        break;
+      default:
+        return null;
+    }
+  }
+
+  let mediaExt = get_url_extension(mediaUrl);
+  let mediaType = get_media_type(mediaExt);
+
+  const handleResolveClick = async (e) => {
     e.preventDefault();
     // You can add your resolve logic here
     console.log("Complaint resolved!");
     console.log(complaint);
     let path = `College/${complaint.CollegeName}/Students/${complaint.CollegeId}/Complains/${complaint.id}`;
-    await resolveStudent(path)
-    await resolveteacher(complaint.CollegeName,complaint.CollegeId,complaint.id);
+    await resolveStudent(path);
+    await resolveteacher(
+      complaint.CollegeName,
+      complaint.CollegeId,
+      complaint.id
+    );
   };
   console.log(complaint);
-  if(complaint === undefined){
-    return(
-      <div className="Nocomplains">There is nothing to show here</div>
-    )
+  if (complaint === undefined) {
+    return <div className="Nocomplains">There is nothing to show here</div>;
   }
+
+  async function getMediaUrl() {
+    await getMedia(complaint.mediaSrc, (mm) => {
+      setMediaUrl(mm);
+      console.log("media orig url ... ", mm, get_url_extension(mm));
+    });
+  }
+  getMediaUrl();
+
   return (
     <div className="preview_complaint">
       <form className="complaint-form">
@@ -65,18 +105,23 @@ export default function PreviewComplaint({ complaint }) {
 
         <div className="button-container clearfix">
           <div className="inputBox">
-            <span> View Attached File</span>
-            {complaint.mediaSrc && (
-              <img src={complaint.mediaSrc} alt="See Uploaded content" />
-            )}
+            <span>Attached File</span>
+            {mediaUrl.trim() !== "" &&
+              (mediaType === "image" ? (
+                <img src={mediaUrl} alt="See Uploaded content" />
+              ) : mediaType === "video" ? (
+                <video controls="controls">
+                  <source src={mediaUrl} type={`audio/${mediaExt}`} />
+                </video>
+              ) : mediaType === "audio" ? (
+                <audio controls="controls">
+                  <source src={mediaUrl} type={`audio/${mediaExt}`} />
+                </audio>
+              ) : null)}
           </div>
         </div>
 
-        
-          <Button  onClick={handleResolveClick}>
-            Resolve
-          </Button>
-        
+        <Button onClick={handleResolveClick}>Resolve</Button>
       </form>
     </div>
   );
