@@ -1,16 +1,16 @@
 import "../styles/PreviewComplaint.css";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { getMedia } from "../../firebase";
 import Loader from "./Loader";
 
 export default function PreviewComplaint({ complaint }) {
   const [mediaUrl, setMediaUrl] = useState("");
-
+  const [isLoading, setIsLoading] = useState(true);
   function get_url_extension(url) {
     return url.split(/[#?]/)[0].split(".").pop().trim();
   }
-
+  console.log("yes");
   function get_media_type(ext) {
     switch (ext.trim().toLowerCase()) {
       case "jpg":
@@ -35,19 +35,14 @@ export default function PreviewComplaint({ complaint }) {
   let mediaType = get_media_type(mediaExt);
 
   async function getMediaUrl() {
-    console.log(complaint.mediaSrc);
    let mm =  await getMedia(complaint.mediaSrc);
 
 
-  
+
     setMediaUrl(mm);
-    
+    setIsLoading(false);
   }
   getMediaUrl();
-  const [isLoading, setIsLoading] = useState(true);
-  setTimeout(() => {
-    setIsLoading(false);
-  }, 2000);
 
   return (
     <div className="preview_complaint">
