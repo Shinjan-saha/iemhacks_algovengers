@@ -1,9 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import logo from '../images/logo.png'
 import loginIcon from '../images/signIn-icon.svg'
 import './about.css'
 
 export default function About() {
+    const navigate= useNavigate();
   return (
     <div className='about-container'>
         <nav className="navbar">
@@ -12,7 +14,9 @@ export default function About() {
         </div>
         
         <div className="nav-btn-container">
-          <button className="about-login-btn">
+          <button className="about-login-btn" onClick={()=>{
+                navigate('/login')
+            }}>
             <img src={loginIcon} alt="login" className="login-icon" />
             <span className="loginSpan">Login</span>
           </button>
