@@ -51,9 +51,11 @@ const SignupForm = ({ onSignup }) => {
       const user = await signUp(email, password);
       console.log("Registered user:", user);
       uid = user["uid"];
+      alert("Account created")
       // Redirect or perform other actions after successful signup
     } catch (error) {
       console.error("Error signing up:", error.message);
+      return;
       // Handle error state
     }
     // Perform login validation
